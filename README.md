@@ -55,7 +55,7 @@ Func:
               --help      Print this help information
 ```
 ## Example
-To run scICW for single-cell RNA sequencing data analysis, the config.txt should be generated at the first place and modified to your needs.
+To run scICW for analysis of single-cell RNA sequencing data, the config.txt should be generated at the first place and modified to your needs.
 ```perl
 perl scICW.v1.pl --template
 ```
