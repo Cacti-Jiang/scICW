@@ -21,7 +21,7 @@ scICW requires the following softwares and reference data:
 ● red_ML (https://github.com/BGIHENG/RED-ML)  
 
 ● QM_GTF (https://www.gencodegenes.org/releases/current.html)  
-● STAR_index (https://www.gencodegenes.org/releases/current.html)  
+● STAR_index (http://labshare.cshl.edu/shares/gingeraslab/www-data/dobin/STAR/STARgenomes/)  
 ● RSEM_index (https://www.gencodegenes.org/releases/current.html)  
 ● Ref_fasta (hg38) (https://www.gencodegenes.org/releases/current.html)  
 ● Ref_len (https://www.gencodegenes.org/releases/current.html)  
