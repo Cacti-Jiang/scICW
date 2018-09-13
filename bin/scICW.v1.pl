@@ -2,7 +2,6 @@
 use strict;
 use warnings;
 use Getopt::Long;
-use FindBin qw /$RealBin/;
 use Cwd qw/abs_path/;
 
 my ( $Config, $samplelist, $template, $help);
