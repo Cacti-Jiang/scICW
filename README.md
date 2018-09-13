@@ -20,13 +20,13 @@ scICW requires the following softwares and reference data:
 ● StarFusion (https://github.com/STAR-Fusion/STAR-Fusion)  
 ● red_ML (https://github.com/BGIHENG/RED-ML)  
 
-● QM_GTF ()  
-● STAR_index ()  
-● RSEM_index ()  
-● Ref_fasta (hg38) ()  
-● Ref_len ()  
-● dbSNP ()   
-● CTAT_lib ()  
+● QM_GTF (https://www.gencodegenes.org/releases/current.html)  
+● STAR_index (https://www.gencodegenes.org/releases/current.html)  
+● RSEM_index (https://www.gencodegenes.org/releases/current.html)  
+● Ref_fasta (hg38) (https://www.gencodegenes.org/releases/current.html)  
+● Ref_len (https://www.gencodegenes.org/releases/current.html)  
+● dbSNP (ftp://ftp.ncbi.nih.gov/snp/organisms/human_9606/VCF)   
+● CTAT_lib (https://www.gencodegenes.org/releases/current.html)  
 ● SimpleRepeat (http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database)   
 ● ALU (http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database)  
 # Installation
@@ -35,24 +35,24 @@ scICW.v1.pl is provided in the ```bin``` directory.
 ## Parameters
 ```
 Basic:
-            * --conf     Configure file
-            * --list     Sample list, format 'SampleID  fqPath' (If PE reads, use comma to separat two fq files)
-              --outdir   Output directory, default [./]
+                      --conf     Configure file (required)
+                      --list     Sample list, format 'SampleID  fqPath' (If PE reads, use comma to separat two fq files) (required) 
+                      --outdir   Output directory, default [./]
 Step:
-              --steps     Step choosen with comma separating, default [1,2,3,4,5,6,7,8,9,10]
-                          1. Inspect raw data
-                          2. Filter adapter contained, high Ns, and low-quality sequences
-                          3. Align clean reads to the reference genome
-                          4. Quantify expression level based on ReadCounts/FPKM/TPM
-                          5. Merge ReadCounts/FPKM/TPM of samples to matrixes
-                          6. Clustering cells by Seurat
-                          7. Detection of alternative splicing events
-                          8. SNP calling
-                          9. Detection of fusion genes
-                          10. Detection of RNA-editing events
+                      --steps    Step choosen with comma separating, default [1,2,3,4,5,6,7,8,9,10]
+                                 1. Inspect raw data
+                                 2. Filter adapter contained, high Ns, and low-quality sequences
+                                 3. Align clean reads to the reference genome
+                                 4. Quantify expression level based on ReadCounts/FPKM/TPM
+                                 5. Merge ReadCounts/FPKM/TPM of samples to matrixes
+                                 6. Clustering cells by Seurat
+                                 7. Detection of alternative splicing events
+                                 8. SNP calling
+                                 9. Detection of fusion genes
+                                 10. Detection of RNA-editing events
 Func:
-              --template  Generate default configure file
-              --help      Print this help information
+                      --template Generate default configure file
+                      --help     Print this help information
 ```
 ## Example
 To run scICW for analysis of single-cell RNA sequencing data, the config.txt should be generated at the first place and modified to your needs.
