@@ -1,5 +1,8 @@
 # scICW
 scICW is an integrated pipeline for both gene expression and genomic architecture analysis in single cells. Our pipeline reveals the global expression profile of the populations, and also identifies the changes in transcriptome/genome including alternative splicing (AS), single-nucleotide polymorphisms (SNPs), RNA editing and gene fusion.  
+
+<img src="https://github.com/Cacti-Jiang/scICW/blob/master/image/workflow.png" width = "550" height = "500" alt="workflow" align=center />
+
 # Dependencies
 scICW requires the following softwares and reference data:  
 ● Samtools (https://github.com/samtools/samtools)  
