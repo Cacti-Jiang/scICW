@@ -5,7 +5,7 @@ scICW is an integrated pipeline for both gene expression and genomic architectur
 
 # Dependencies
 scICW requires the following softwares and reference data:  
-● Samtools (https://github.com/samtools/samtools)  
+• Samtools (https://github.com/samtools/samtools)  
 ● Vcftools (https://vcftools.github.io/index.html)  
 ● Fastqc (https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)  
 ● Qualimap (http://qualimap.bioinfo.cipf.es/)  
