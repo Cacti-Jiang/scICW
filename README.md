@@ -25,7 +25,7 @@ scICW requires the following softwares and reference data:
 ● RSEM_index (https://www.gencodegenes.org/releases/current.html)  
 ● Ref_fasta (hg38) (https://www.gencodegenes.org/releases/current.html)  
 ● Ref_len (https://www.gencodegenes.org/releases/current.html)  
-● dbSNP (ftp://ftp.ncbi.nih.gov/snp/organisms/human_9606/VCF)   
+● dbSNP (http://hgdownload.cse.ucsc.edu/goldenPath/hg38/database/)   
 ● CTAT_lib (https://data.broadinstitute.org/Trinity/CTAT_RESOURCE_LIB/)  
 ● SimpleRepeat (http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database)   
 ● ALU (http://hgdownload.soe.ucsc.edu/goldenPath/hg38/database)  
