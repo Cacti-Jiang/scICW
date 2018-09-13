@@ -1,0 +1,5 @@
+Cell1	/path/to/Cell1_1.fq.gz,/path/to/Cell1_2.fq.gz
+Cell2   /path/to/Cell2_1.fq.gz,/path/to/Cell2_2.fq.gz
+Cell3   /path/to/Cell3_1.fq.gz,/path/to/Cell3_2.fq.gz
+Cell4   /path/to/Cell4.fq.gz
+Cell5   /path/to/Cell5.fq.gz

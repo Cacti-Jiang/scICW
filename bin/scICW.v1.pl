@@ -448,7 +448,7 @@ Rscript = /path/to/R-3.4.3/bin/Rscript
 Samtools = /path/to/samtools-1.5/bin/samtools
 Vcftools = /path/to/vcftools-0.1.15/bin/vcftools
 FastQC = /path/to/FastQC/fastqc
-MultiQC = /hwfssz1/ST_PRECISION/PUB/bin/multiqc
+MultiQC = /path/to/multiqc
 QualiMap = /path/to/qualimap_v2.2.1/qualimap
 
 

@@ -1,0 +1,90 @@
+#### Configure file
+### Common tools
+java = /path/to/bin/java
+perl = /path/to/ActivePerl-5.18.4/bin/perl
+python = /path/to/Anaconda2-4.3.0/bin/python
+python_env = /path/to/Anaconda2-4.3.0/lib/python2.7     # seperated by colon
+Rscript = /path/to/R-3.4.3/bin/Rscript
+Samtools = /path/to/samtools-1.5/bin/samtools
+Vcftools = /path/to/vcftools-0.1.15/bin/vcftools
+FastQC = /path/to/FastQC/fastqc
+MultiQC = /path/to/multiqc
+QualiMap = /path/to/qualimap_v2.2.1/qualimap
+
+
+### Sequencing information
+phred = phred33  # phred33 or phred64
+read_length = 100
+
+### Step1: Inspect raw data
+Step1_FastQC = True   # Run FastQC for raw reads
+Step1_MultiQC = True  # Run MultiQC to summary results of FastQC
+Step1_threads = 1
+
+### Step2: Filter reads
+Cutadapt = /path/to/Anaconda2-4.3.0/bin/cutadapt
+Clean_Model = Mask  # Mask, Discard or Trim
+R1_3ad = CTGTCTCTTATACACATCTCCGAGCCCACGAGAC   # 3' end contamination for Reads1, default is Nextera adapter
+R2_3ad = CTGTCTCTTATACACATCTGACGCTGCCGACGA    # 3' end contamination for Reads2, default is Nextera adapter; SE reads will be ignored
+MaxN = 0.2  # Maximum percentage of N bases
+Quality_cutoff = 5  # Cutoff for trimming low-quality ends; Only used for TRIM clean
+MinLen = 80 # Minimum length for cleaned reads; Only used for TRIM clean
+Step2_FastQC = True   # Run FastQC for clean reads
+Step2_MultiQC = True  # Run MultiQC to summary reports
+Step2_threads = 1
+
+### Step3: Align clean reads
+RunQualiMap = True  # Run QualiMap to calculate reads mapping distribution
+QM_vf = 20G  # Specific memory setting for QualiMap
+QM_GTF = /path/to/Ref/gencode.v27.primary_assembly.annotation.gtf #Gencode_human.release27
+Step3_MultiQC = True  # Run MultiQC to summary reports
+Step3_threads = 4
+## STAR MODEL
+STAR = /path/to/STAR-2.6.0c/bin/Linux_x86_64/STAR
+STAR_index = /path/to/Ref/STAR_sj100/ 
+MultimapNmax = 10  # Maximum multi-map number
+outSAMunmapped = False  # If 'True', also output unmapped reads in BAM file
+
+### Step4: Quantify expression level
+## RSEM MODEL
+RSEM = /path/to/RSEM-1.3.0/rsem-calculate-expression
+RSEM_index = /path/to/Ref/RSEM_STAR_sj100/gencode.v27
+Single_cell_prior = True  # Used SingleCell parameter in RSEM
+Step4_threads = 2
+
+### Step5: Generate expression matrix
+RSEM_Merge2Matrix = /path/to/bin/Merge2Matrix_from_RSEM.R   # For STAR->RSEM model
+
+### Step6: Clustering
+ClusterBySeurat = /path/to/bin/ClusterBySeurat.R
+
+### Step7: Outrigger
+Ref_fasta = /path/to/Ref/GRCh38.primary_assembly.genome.fa
+Ref_len = /path/to/Ref/GRCh38.primary_assembly.genome.fa.len
+Step7_threads = 8
+
+### Step8: SNP calling
+Picard = /path/to/picard_2.10.10_data/picard.jar
+GATK = /path/to/GenomeAnalysisTK.jar
+Platform = COMPLETE # choose 'ILLUMINA' or 'COMPLETE'
+dbSNP = /path/to/Ref/dbsnp_150.hg38.vcf.gz
+Vcf2Mat = /path/to/bin/Mvcf2RawMat.nochr.pl
+BiMat = /path/to/bin/RawMat2Mat0.R
+Sifit = /path/to/SiFit.jar
+
+### Step9: Detection of fusion genes
+StarFusion = /path/to/STAR-Fusion-v1.4.0/STAR-Fusion
+CTAT_lib = /path/to/Ref/ctat_genome_lib_build_dir
+Step9_threads = 4
+
+### Step10: Detection of RNA-editing events
+red_ML = /path/to/red_ML.v2.pl
+SimpleRepeat = /path/to/Ref/simpleRepeat.bed
+ALU = /path/to/Ref/hg38.alu.bed
+
+### Statistics
+Stat_Cutadapt = /path/to/bin/Stat_Cutadapt.pl
+Stat_STAR = /path/to/bin/Stat_STAR.pl  # For STAR->RSEM model
+Stat_QualiMap = /path/to/bin/Stat_QualiMap_RNAseq.pl
+Stat_Expr = /path/to/bin/Stat_ExprMat.R
+Stat_Merge = /path/to/bin/Stat_Merge.R
